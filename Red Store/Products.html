@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="contaniar">
+        <div class="navbar">
+            <div class="logo">
+                <img src="data:image/png;base64,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"
+                    width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7lHAvBtwiOcrXucTncbyDc6xscDuLDNs4cA&usqp=CAU" width="30px" height="30px">
+            <img src="https://cdn-icons-png.flaticon.com/128/1828/1828859.png" width="30px" height="30px" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <div class="small-container">
+
+        <div class="row row-2">
+            <h2>All Products</h2>
+            <select>
+                <option>Default Shorting</option>
+                <option>Short by price</option>
+                <option>Short by popularity</option>
+                <option>Short by rating</option>
+                <option>Short by sale</option>
+            </select>
+        </div>
+
+
+        <div class="row">
+            <div class="col-4">
+                <img src="https://rsanimesh.github.io/images/product-1.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://rsanimesh.github.io/images/product-10.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBrOMHEO4EDcN3Hn_HuHTYr3_j3Z6WIA1gnMrK3b-isJZ9e7zRmqpbUKTnwDs2F1bLkUU&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOETRSnR5GIJdH_1HpYoR6bpUkHImbad1zHHhzk_b8ygeaIIaroev22_PUwgLIzxkc9J8&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNYHQ4VMPz-ODbEAKKT3roKD0oSLo_kDyvRTgaLL57mwzjBr7pZ-bdkjMcDEObnZYrBaA&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTTyTJhT6BJnaaDWwpb9CXco9VJ8GbnPkDNg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+
+
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4__AexCmuZtKFa5lwetGWPb-V4UvJy3qUWg&usqp=CAU">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="ratting">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    </div>
+    <div class="page-btn">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>&#8594;</span>
+    </div>
+    </div>
+
+
+    <!-------footer------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios Mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKEKY6i2qtBWuc4F8m9eMbR3nUv58FojzXDPm96Kiki7_Ot3_yxqbi4_dq9JZI4JJ9Uw&usqp=CAU" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ-4vOoYY_8Pf9gMke9U4l02IVZU21qqu6eek89RlfzYqG-JikB0l51ifPI7c0rnBNUGg&usqp=CAU" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="https://rsanimesh.github.io/images/logo.png" alt="">
+                    <p>Our Purpose is to Sustainably Make The Pleasure and Benefits of Sports Accessible to The Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebool</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">Copyright-2020 - easy tutorials</p>
+        </div>
+    </div>
+    <!--------js for toggle menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
